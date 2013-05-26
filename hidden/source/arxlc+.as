@@ -1,12 +1,12 @@
 
 ; ■ arX Launcher 10.0x					    お手軽ランチャー
-;							 最終更新日 04/09/25
+;							 最終更新日 04/10/14
 ; ―――――――――――――――――――――――――――――――――――――
 
 	#define appname		"arxlc"
-	#define appver		"9.93b2"
+	#define appver		"10.00"
 	#define appvers		appname+" v."+appver+setfile_ex
-	#const appveri		9922
+	#const appveri		10000
 
 
 ; □ 一言;
@@ -91,10 +91,12 @@
 ;			システム使用オブジェクトファイルの拡張子を ax に変更
 ;			最小化ボタン押下時の挙動変更(画面サイズ変更→最小化)
 ;			コマンドライン指定の仕様上の問題を修正(synciconsize)
-;	04/09/19 (993b)	hsgetmsg ver.1.3 → 1.4β に差し替え
+;	04/09/19(993b1)	hsgetmsg ver.1.3 → 1.4β に差し替え
 ;			dllprocp 命令(機能は ll_callfunc と同等)をマクロ化
 ;	04/09/25(993b2)	hsgetmsg ver.1.4β → 1.4β3 に差し替え
 ;			filelist.folderid への直接のアクセスを可能に(hdtp)
+;			タイトルによる終了処理判断(hdtp.as 用)に対応
+;	04/10/14(10000)	hsgetmsg ver.1.4β3 → 1.4(正式版) に差し替え
 
 ; ―――――――――――――――――――――――――――――――――――――
 ; 命令拡張
