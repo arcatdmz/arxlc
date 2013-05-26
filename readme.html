@@ -1,0 +1,249 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+ <META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+ <META http-equiv="Content-Style-Type" content="text/css">
+ <STYLE type="text/css"><!--
+	BODY		{ margin: 10px; background-color: #FFF; color: #000; font-size: 96%; font-family: Meiryo, monospace; line-height: 120%; }
+	H2		{ padding: 10px; border: solid #000; border-width: 0px 0px 2px 0px }
+	H3		{ padding: 8px; border: solid #000; border-width: 0px 0px 1px 0px }
+	A		{ color: #093; text-decoration: none }
+	A:hover		{ color: #C30; text-decoration: underline }
+	HR		{ border: solid #9C3; border-width: 1px 0 0 0; }
+	HR.his		{ border-color: #CDC; }
+	TD		{ padding: 0px }
+	.totop		{ margin: 0px 0px 10px 0px; display: block; text-align: right; font-size: x-small }
+	.item		{ float: left; margin-right: 2px; margin-bottom: 2px; padding: 3px; border: 1px solid #000 }
+	.fr		{ float: right;	margin-left : 5px }
+	.fl		{ float: left;	margin-right: 5px }
+	.frend		{ clear: right }
+	.flend		{ clear: left }
+	.b		{ font-weight: bold }
+	.r		{ text-align: right }
+ //--></STYLE>
+ <TITLE>arX Launcher 説明書</TITLE>
+</HEAD>
+<BODY>
+
+<H1 style="border: 1px solid #000; padding: 20px 20px 15px 20px">arX Launcher 説明書</H1>
+
+<IMG src="hidden/img_main.png" alt="(起動時の画面)" class="fr" width=56 height=41>
+<A href="#summary" class="b">概要</A> |
+<A href="#howtouse" class="b">使い方</A> (
+<A href="#howto_install">インストールとアンインストール</A>,
+<A href="#howto_run">起動と利用前の準備</A>,
+<A href="#howto_runex">利用前の準備例</A>,
+<A href="#howto_appicon">アプリアイコンの活用</A>,
+<A href="#howto_others">その他の機能</A>
+) |
+<A href="#caution" class="b">使用上の注意</A> |
+<A href="#history" class="b">更新履歴</A>
+<BR>
+最終更新日：<SPAN class="b">2004/10/14(ver.10.00)</SPAN>
+<BR class="frend">
+<BR>
+arX Launcher は、よく使うプログラムやファイルをメニューやボタンのクリックにより起動できるランチャーソフトです。メイン画面にドラッグ＆ドロップされたファイルをランチャー登録されたプログラムで開くことも出来ます。
+<HR noshade>
+
+
+<A name="summary"></A><H2>概要</H2><A href="#top" class="totop">ページ最上部に戻る↑</A>
+主な特徴は以下の通りです。
+<UL>
+	<LI>Windows の [スタート] メニューのようなポップアップメニュー<BR><BR><UL>
+		<LI>起動時に arxlc.exe の入ったフォルダ(ルートフォルダ)を基点としてサブフォルダやショートカットファイルの一覧が読み込まれ、カテゴリーやランチャー項目として表示されます。このため、ランチャー項目の編集は、普段使い慣れている Windows のエクスプローラ上などでフォルダを作成したり、ショートカットを作成・編集して行うことになります。ランチャー項目に関する殆ど全ての編集機能を Windows に一任したことで(リンク名、リンク先の変更は arxlc から実行可能)、ユーザーにとって編集作業が分かり易いだけでなくプログラムの動作も比較的軽くできています。<BR><BR></LI>
+		<LI>ランチャー項目名の左にアイコンが表示されるため、登録されている項目が一目で分かります。<BR><BR></LI>
+	</UL></LI>
+	<LI>シンプルな構成のメイン画面<BR><BR><UL>
+		<LI>上記ポップアップメニュー表示用のボタンとアプリアイコン(下記)、閉じるボタンと最小化ボタンだけからなる実用性重視の画面です。<BR><BR></LI>
+		<LI>ランチャー登録してあるプログラムの中でも最も使用頻度の高いものを“アプリ”として登録することで、そのアイコンをメイン画面に並べて表示でき、クリックでの一発起動や、更にはアプリアイコンへのファイルのドラッグ＆ドロップによりそのプログラムでファイルを開くことも出来ます。<BR><BR></LI>
+		<LI>常に最前面にメイン画面を表示させることも可能ですので、ファイルのドラッグ＆ドロップに対応した画像ビューワーや音楽プレイヤーなどへのショートカットを“アプリ登録”しておけば便利なこと間違い無しです。</LI>
+	</UL></LI>
+</UL>
+また、Windows 用プログラミング言語 HSP を使用できる方は是非プラグイン機能を利用してみて下さい。HSP 製のプログラムと arxlc の間でリアルタイムな情報のやり取りをするためのモジュール hdtp.as が hidden フォルダ内の source.lzh に含まれています。詳細については同フォルダ内の readme.txt をご覧下さい。<BR>
+<BR>
+<HR noshade>
+
+
+<A name="howtouse"></A><H2>使い方</H2><A href="#top" class="totop">ページ最上部に戻る↑</A>
+<A href="#howto_install">インストールとアンインストール</A> |
+<A href="#howto_run">起動と利用前の準備</A> |
+<A href="#howto_runex">利用前の準備例</A> |
+<A href="#howto_appicon">アプリアイコンの活用</A> |
+<A href="#howto_others">その他の機能</A>
+
+<A name="howto_install"></A><H3>インストールとアンインストール</H3><A href="#howtouse" class="totop">[使い方] のトップに戻る←</A>
+arxlc.exe をお好きなフォルダに移動するだけでインストール(ソフトウェアを使える状態にすること)は完了です。
+arxlc.exe 及び hidden フォルダをゴミ箱に放り込んで頂ければ、アンインストール(ソフトウェアをパソコン内から除去すること)したことになります。
+この他にランチャーがレジストリを操作したりすることは一切ありません。
+
+<A name="howto_run"></A><H3>起動と利用前の準備</H3><A href="#howtouse" class="totop">[使い方] のトップに戻る←</A>
+<IMG src="hidden/img_installer.png" alt="(初期設定)" class="fr" width=193 height=174>
+実行ファイル arxlc.exe のアイコンをダブルクリックすると、初回起動なら右のような初期設定画面が現われます。<BR>
+<BR>
+<IMG src="hidden/img_main.png" alt="(メイン画面)" class="fl" width=56 height=41>
+初回起動で設定を終えるか、二回目以降の起動時には、ランチャー項目の読み込みが終了してから左のようなメイン画面が現れます。<BR>
+<BR class="frend">
+<BR class="flend">
+<IMG src="hidden/img_rootdir.png" alt="(ルートフォルダ)" class="fr" width=300 height=260>
+さて、では実際にランチャーの使用を開始するために、ランチャーから開きたいファイルやフォルダ、プログラムを項目として登録します。この作業が一般的なランチャーでは何かと面倒なわけですが、当ランチャーの場合は案外楽です。
+まずメイン画面の緑の [a] アイコン(プログラムアイコン)をクリックして出てきたメニュー(メインメニュー)から [ルートフォルダを開く] を選択すると、右図のように arxlc.exe の入ったフォルダが開きます。<BR>
+ここに“フォルダを新規作成”するとカテゴリーとして、“プログラムやファイル、URLへのショートカットを作成”するとランチャー項目として、それらのフォルダやファイルが登録されます。また、そうして作成したフォルダの中に更に“フォルダを新規作成”すればカテゴリー中のサブカテゴリとして、“ショートカットを作成”すればカテゴリー中のランチャー項目として、やはりそれらのフォルダやファイルが登録されます。<BR>
+尚、ランチャーはもちろん四六時中ルートフォルダ内のフォルダやファイルの構成を確認しているわけではありません。起動時にのみ、その構成の確認を行いますので、上記のような登録作業を行った後はメインメニューから [arxlc の再起動] を行う必要があります。再起動は Windows 起動後の初回起動時と比較してかなり高速に行われるので、あまりストレスに感じることは無いと思います。
+<BR class="frend">
+<BR>
+上記のようにしてランチャー項目の登録を済ませた後は、次項の画面のようにフォルダがサブメニューを持つ<IMG src="hidden/img_caticon.png" alt="(フォルダ)" style="margin: 0px 5px 0px 5px; vertical-align: middle" width=18 height=16>マーク(カテゴリー)で表示されます。<BR>
+ちなみに、ルートフォルダ内には初期設定で [プラグインを利用する] にチェックを入れると「プラグインの機能」という名前のフォルダが作成されます。中にはプラグインを起動するためのショートカットファイルが入っており、ランチャー起動中に実行すると便利な機能を利用できます。各プラグインの詳細については「hidden」フォルダ内の readme ファイルをご覧下さい。<BR>
+
+<A name="howto_runex"></A><H3>利用前の準備例</H3><A href="#howtouse" class="totop">[使い方] のトップに戻る←</A>
+例えば、以下のような環境を整えて使用します。(画面解像度800×600未満だったり、ブラウザ画面を最大化していないと以下の表示が乱れることがありますのでご注意下さい。)<BR>
+<BR>
+<IMG src="hidden/img_menu.png" alt="(メインメニュー)" class="fr" width=413 height=284>
+<TABLE cellspacing=0>
+ <TR><TD colspan=3>(arxlc.exe の含まれているフォルダ)</TD></TR>
+ <TR><TD>├</TD><TD colspan=2>□ arxlc.exe</TD></TR>
+ <TR><TD>├</TD><TD colspan=2>■ ネットワーク</TD></TR>
+ <TR><TD>│</TD><TD>├</TD><TD>■ お気に入り</TD></TR>
+ <TR><TD>│</TD><TD>│</TD><TD>├ ◆ ARC's  Internet Station</TD></TR>
+ <TR><TD>│</TD><TD>│</TD><TD>└ ◆ Hot Soup Processor Page</TD></TR>
+ <TR><TD>│</TD><TD colspan=2>├ ◇ Internet Explorer</TD></TR>
+ <TR><TD>│</TD><TD colspan=2>└ ◇ Outlook Express</TD></TR>
+ <TR><TD>├</TD><TD colspan=2>■ 音楽</TD></TR>
+ <TR><TD>│</TD><TD>├</TD><TD>■ プレイヤー</TD></TR>
+ <TR><TD>│</TD><TD>│</TD><TD>├ ◇ arX MusicPlayer</TD></TR>
+ <TR><TD>│</TD><TD>│</TD><TD>└ ◇ KbMediaPlayer</TD></TR>
+ <TR><TD>│</TD><TD colspan=2>└ ◇ CD2WAV</TD></TR>
+ <TR><TD colspan=3>…</TD></TR>
+</TABLE>
+<BR>
+（ ■ ... フォルダ　　　　　　　	）<BR>
+（ ◇ ... ショートカットファイル	）<BR>
+（ ◆ ... インターネットショートカットファイル ）<BR>
+<BR class="frend">
+使い方が良く分からない、という方はとりあえず Internet Explorer のお気に入りフォルダ(※1)や、Windowsのスタートメニュー(※2) に arxlc.exe を移動後、起動してみると良いかも知れません。<BR>
+<BR>
+（ ※1 ... C:\Documents and Settings\ユーザー名\Favorites など）<BR>
+（ ※2 ... C:\Documents and Settings\ユーザー名\スタート メニュー\プログラム など）<BR>
+<BR>
+フォルダの階層数（例えば上の例で ■プレイヤー の階層数は 2 ）には制限がありませんが、全体でフォルダ32個まで、また、1個のフォルダ内にショートカットファイル192個までしか登録できません。<BR>
+
+<A name="howto_appicon"></A><H3>アプリアイコンの利用</H3><A href="#howtouse" class="totop">[使い方] のトップに戻る←</A>
+<IMG src="hidden/img_mainapps.png" alt="(アプリ登録を済ませたメイン画面)" class="fl" style="margin-bottom: 5px" width=204 height=45>
+ここまででランチャーを利用する環境が整いましたが、まだ真価を発揮させることが出来ては居ません。左図のように良く使うプログラムや音楽プレイヤー、画像ビューワーなど(正確にはそれらへのショートカットファイル)を“アプリ”として登録すれば更に便利になります。<BR>
+“アプリ登録”するには、メインメニューで項目を [Ctrl] キーを押しながらクリックするか、またはプログラムアイコンを右クリックして表示されるメニューで項目をクリックすることで出現する“拡張メニュー”で、[アプリ登録/削除] を選択します。<BR>
+アプリアイコンは、クリックすればそのプログラムを開き、右クリックすればメインメニューの該当項目の拡張メニューを表示します。また、ファイルやフォルダをメイン画面のアプリアイコンにドラッグ＆ドロップすれば、ファイルやフォルダがそのプログラムで開かれます。アプリ登録されている項目がプログラムで無い場合は、ドラッグ＆ドロップを無視して単にそのファイルやフォルダなどが開かれます。
+<BR style="clear: left">
+
+<A name="howto_others"></A><H3>その他の機能</H3><A href="#howtouse" class="totop">[使い方] のトップに戻る←</A>
+<IMG src="hidden/img_menuext.png" alt="(拡張メニュー)" class="fr" width=156 height=145>
+<SPAN class="item">拡張メニュー(詳細)</SPAN><BR class="flend">
+<UL>
+	<LI>アプリ登録/削除 ... 既にアプリ登録されている項目のときにクリックするとアプリ登録を解除します。</LI>
+	<LI>アプリ移動(←,→) ... アプリ登録されている項目の拡張メニューでのみ利用可能になります。メイン画面でのアプリアイコンの位置を左か右に移動します。</LI>
+	<LI>リンク名の変更 ... ショートカットの名前を変更し、項目名を更新します。</LI>
+	<LI>リンク先の変更 ... ショートカットのプロパティ画面を表示します。</LI>
+	<LI>リンク元を開く ... ショートカットのリンク元ファイル/フォルダ/URLを開きます。</LI>
+	<LI>リンク元フォルダを開く ... ショートカットのリンク元ファイル/フォルダが入っているフォルダ(親フォルダ)を開きます。メインメニューで [Shift] キーを押しながら項目をクリックすることによっても、この機能を利用できます。</LI>
+</UL>
+<SPAN class="item">見た目の設定</SPAN>
+メインメニューに表示されるアイコンの大きさ、アプリアイコンの大きさ、メイン画面の黒い枠幅とアプリアイコンの間隔については、設定が変更されるとランチャーが自動的に再起動します。アプリアイコンを綺麗に表示するには、メニューアイコンの大きさをアプリアイコンの大きさの整数倍にするとうまく行きます。<BR class="flend">
+<BR>
+<SPAN class="item">機能の設定</SPAN>
+マウスカーソルを画面端に持っていったとき、または更にそこでクリックしたときにメインメニューを表示させるようにできます。<BR class="flend">
+<BR>
+<SPAN class="item">コマンドラインオプション</SPAN>
+上記の設定ではアイコンの大きさを 1px 刻みで決めたりはできませんが、arxlc.exe へのショートカットを作成し、そのプロパティを少し書き換えるだけでランチャーの動作を細かく指定できます。<BR>
+<BR>
+まずは普通に arxlc.exe へのショートカットをデスクトップなどに作成して下さい。<BR>
+次にそのアイコンを右クリック後 [プロパティ] をクリックして、 [ショートカット] タブの [リンク先:] ...\arxlc.exe&quot; の後に半角スペースを挟んで以下の文字列を付け加えます。<BR>
+<UL>
+	<LI>&quot;(アイコンのサイズ)&quot; + &quot;i&quot;	（例; 16i）<UL>
+		<LI>ショートカットアイコンを表示する大きさを px (ピクセル)単位で指定できます。</LI>
+		<LI>アイコンのサイズを 0 にするとメニューアイコンを表示しません。</LI>
+	</UL><BR></LI>
+	<LI>&quot;(アイコンのサイズ)&quot; + &quot;a&quot;	（例; 16a）<UL>
+		<LI>アプリアイコンを表示する大きさを px 単位で指定できます。</LI>
+	</UL><BR></LI>
+	<LI>&quot;(合わす=1か否=0か)&quot; + &quot;s&quot;<UL>
+		<LI>アプリアイコンを表示する大きさをメニューアイコンに合わすことができます。</LI>
+	</UL><BR></LI>
+	<LI>&quot;(表示位置Ｘ座標)&quot; + &quot;x&quot;	（例; 1000x）<UL>
+		<LI>起動時にランチャーを表示する横位置を px 単位で指定できます。左端が 0 です。</LI>
+	</UL><BR></LI>
+	<LI>&quot;(表示位置Ｙ座標)&quot; + &quot;y&quot;	（例; 700y）<UL>
+		<LI>起動時にランチャーを表示する縦位置を px 単位で指定できます。上端が 0 です。</LI>
+	</UL><BR></LI>
+	<LI>&quot;(枠幅)&quot; + &quot;b&quot;	（例; 10b）<UL>
+		<LI>メイン画面の枠幅を px 単位で指定できます。</LI>
+	</UL><BR></LI>
+	<LI>&quot;(アプリアイコン間隔)&quot; + &quot;m&quot;	（例; 8m）<UL>
+		<LI>アプリアイコンの間隔を px 単位で指定できます。</LI>
+	</UL><BR></LI>
+	<LI>&quot;(枠幅)&quot; + &quot;b&quot;	（例; 10b）<UL>
+		<LI>メイン画面の枠幅を px 単位で指定できます。</LI>
+	</UL><BR></LI>
+	<LI>&quot;u&quot; &quot;d&quot; &quot;r&quot; &quot;l&quot; のいずれか<UL>
+		<LI>ランチャーメニューを表示する領域を<UL>
+			<LI>u (画面上端)</LI>
+			<LI>d (画面下端)</LI>
+			<LI>r (画面右端)</LI>
+			<LI>l (画面左端)</LI>
+		</UL>にします。 &quot;n&quot; を指定すると表示しないようにできます。</LI>
+	</UL><BR></LI>
+	<LI>&quot;c&quot;<UL>
+		<LI>画面端をクリックしないとメニューが出ないようにできます。</LI>
+		<LI>カーソルを置くだけでメニューが出るのが煩わしい方向け。</LI>
+	</UL><BR></LI>
+</UL>
+衝突しないオプションについては複数を併記することも出来ます。衝突するオプションが例えば 16a1s のように記述された場合は後ろの 1s が優先されます。<BR>
+“...\arxlc.exe&quot; 16id”なら縦横16pxでアイコンを表示し、メインメニューは画面下端にマウスカーソルを持ってきた時に出現するようになります。16id は d16i でも同じことになります。128i を指定すると素敵に巨大なアイコンが拝めたりします。<BR>
+<BR>
+尚、このようにしてコマンドラインで指定されたオプションは本体側で保存されている設定に上書きされます。
+一度コマンドラインを指定して起動した後は、何度もコマンドラインを指定しないでも、該当個所の設定をランチャー側で変更しない限りはコマンドラインの設定が保存されたままになります。<BR>
+ただし、実は上記の他にルートフォルダを arxlc.exe が入っているフォルダ以外にすることができたり、設定ファイル名を arxlc.dat でなくすることができる代わりに起動時毎回指定しなければ設定が適用されない“特殊コマンドライン”というものが存在します。ここでは説明しませんが、興味のある方はプラグイン“arxlc インストーラ”を使ってみて下さい。そこで作成されるショートカットには特殊コマンドラインが指定されています。<BR>
+<BR>
+コマンドラインで設定を変更するのが面倒だ、という方のために、画面設定を簡単に変更できる“arxlc の詳細設定”プラグインがあります。プラグイン(拡張機能)については次項をご覧下さい。<BR class="flend">
+<BR>
+<SPAN class="item">拡張機能</SPAN>
+初回起動時の初期設定で [プラグインを利用する] にチェックをつけた場合、目立ちませんが(^^;メインメニューに [拡張機能] という項目が表示されます。その項目を選択すると hidden フォルダ内にインストールされたプラグイン(ランチャーの機能を補助・拡張してくれるファイル)の一覧を表示します。この時、拡張子(ファイル名末尾)が xpi のファイルがプラグインとして認識されます。プラグインの機能を利用する必要が無い方は、全てのプラグインと plus.ax, mklnk.ax を削除してしまっても問題ありません。arxlc.ax はランチャー本体の挙動を決める大切なファイルですので絶対に削除しないで下さい。<BR>
+<BR>
+はじめから付属しているプラグインとその説明については hidden フォルダ内の各 readme ファイルをご覧下さい。今後 <A href="http://hp.vector.co.jp/authors/VA022483/arxlc/" target=_blank>arX Launcher 特設サイト</A> 内でその他のプラグインを追加配布予定です。<BR>
+プラグインは HSP ユーザーの方であれば簡単に作れます。同フォルダ内の readme.txt に詳しい説明が書いてありますので、是非どうぞ。<BR class="flend">
+<BR class="frend">
+<HR noshade>
+
+
+<A name="caution"></A><H2>使用上の注意</H2><A href="#top" class="totop">ページ最上部に戻る↑</A>
+<UL>
+	<LI>当ランチャー(arX Launcher)を使用した結果、いかなる事態に陥っても著作者である arc＠arcis は責任を負わず、一切の保証を致しません。</LI>
+	<LI>当ランチャーの著作権は arc＠arcis が保有しています。無断で改変、再配布などをしないで下さい。ソーススクリプトは hidden フォルダ内 source.lzh に圧縮されています。各ファイルの説明などは同フォルダ内 readme.txt に記載してあります。ソース中に参考になる部分があれば自由に転用して構いません。</LI>
+	<LI>当ランチャーの作成には様々な方が提供してくださっている資料が大変役立ちました。この場を借りて全ての有益な情報を公開して下さっている方々に御礼申し上げます。特にお世話になったサイトを幾つか掲載しておきます。<UL>
+		<LI><A href="http://yokohama.cool.ne.jp/chokuto/" target=_blank>ちょくとのページ</A></LI>
+		<LI><A href="http://www.silkroad.ne.jp/Sakura/" target=_blank>HSP-NEXT</A></LI>
+		<LI><A href="http://www.microsoft.com/japan/msdn/library/" target=_blank>MSDN ライブラリ</A></LI>
+		<LI><A href="http://homepage2.nifty.com/Mr_XRAY/Halbow/" target=_blank>Win32 API by Object Pascal of Delphi</A></LI>
+		<LI><A href="http://www.kab-studio.biz/Programing/Codian/" target=_blank>Codian</A></LI>
+	</UL></LI>
+	<LI>当ランチャーは、おにたまさんが作成されたWindows用プログラミング言語 <A href="http://www.onionsoft.net/hsp/" target=_blank>Hot Soup Processor</A>(ver.2.61) によって製作されました。</LI>
+	<LI>当ランチャーの実行ファイルには、ちょくとさんが作成されたHSPのランタイム <A href="http://yokohama.cool.ne.jp/chokuto/" target=_blank>hsgmrtc.hrt</A> が利用されています。また、実行ファイルの作成時には FORCE さんの <A href="http://hp.vector.co.jp/authors/VA015266/" target=_blank>HSP Resource Compiler</A> を使用しました。更に Kpan さんの <A href="http://www.geocities.co.jp/Playtown-Yoyo/6130/" target=_blank>Let's HSPUPX!</A> の助けを借りて <A href="http://upx.sourceforge.net/" target=_blank>upx</A> 圧縮が施されています。</LI>
+</UL>
+<HR noshade>
+
+<A name="history"></A><H2>更新履歴</H2><A href="#top" class="totop">ページ最上部に戻る↑</A>
+<TABLE>
+<TR><TD class="b">04/09/06</TD><TD>9.90</TD><TD>初一般公開。source.lzh 内 sample_01.as が正しく実行できない場合があるバグが既知の状態。</TD></TR>
+<TR><TD colspan=3><HR class="his" noshade></TD></TR>
+<TR><TD class="b">04/09/07</TD><TD>9.91</TD><TD>上記の問題を修正、色のカスタマイズ機能付加。HSP Contest 一般部門に登録。</TD></TR>
+<TR><TD colspan=3><HR class="his" noshade></TD></TR>
+<TR><TD class="b">04/09/17</TD><TD>9.92</TD><TD>フォルダ登録数の限界を変更(64→32)、Windows XP SP2のメモリ保護機能(DEP)に対応、メニューアイコン非表示時の処理を少し軽量化、特殊なショートカット(&quot;マイ コンピュータ&quot;等)に対応、プラグイン &quot;arxlc インストーラ&quot; 追加、最小化ボタン押下時の挙動変更(画面サイズ変更→最小化)。</TD></TR>
+<TR><TD colspan=3><HR class="his" noshade></TD></TR>
+<TR><TD class="b">04/09/19</TD><TD>9.93b</TD><TD>内部で使用しているランタイム hsgetmsg のバージョンを 1.3→1.4β に更新。<BR>ランタイムのベースが HSP ver.2.60→2.61 に変わったため <A href="http://upx.sourceforge.net/" target=_blank>upx</A> 圧縮ができなくなる。</TD></TR>
+<TR><TD colspan=3><HR class="his" noshade></TD></TR>
+<TR><TD class="b">04/09/25</TD><TD>9.93b2&nbsp;</TD><TD>内部で使用しているランタイム hsgetmsg のバージョンを 1.4β→1.4β3 に更新。<BR><A href="http://upx.sourceforge.net/" target=_blank>upx</A> 圧縮が再度利用可能になり、実行ファイルのサイズが減少(98KB→54KB)。</TD></TR>
+<TR><TD colspan=3><HR class="his" noshade></TD></TR>
+<TR><TD class="b">04/10/14&nbsp;</TD><TD>10.00</TD><TD>内部で使用しているランタイム hsgetmsg のバージョンを 1.4β3→1.4 に更新。</TD></TR>
+</TABLE>
+<BR>
+<HR noshade>
+<DIV class="r">&copy; <A href="mailto:arc@mocha.freemail.ne.jp">arc</A><A href="http://hp.vector.co.jp/authors/VA022483/" target=_blank>@arcis</A> 2004</DIV>
+</BODY>
+</HTML>
